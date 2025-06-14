@@ -9,4 +9,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected title = 'angular-tut';
+  name ='Khushi Mishra';
+  x = 4;
+  y = 4;
+  user1 = 'khushi';
+  user2 = 'om';
 }

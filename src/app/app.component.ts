@@ -11,12 +11,25 @@ import { ProfileComponent } from './profile/profile.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
- handleEvent(event:Event){
-  console.log("Function called!!!",event.type)
-  console.log("Value",(event.target as HTMLInputElement).value)
-  // console.log("Function called!!!",(event.target as Element).className)
- }
+  name=''
+  displayName=''
+  email=''
+  getName(event:Event){
+    this.name=(event.target as HTMLInputElement).value
+  }
+  showName(){
+    this.displayName=this.name;
+  }
+  setName(){
+    this.name="prachi";
+  }
+  getEmail(val:string){
+    console.log(val)
+    this.email=val
+  }
+  setEmail(){
+    this.email="default@test.com"
+  }
   }
 
 

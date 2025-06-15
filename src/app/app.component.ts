@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
   imports: [LoginComponent, SignupComponent, ProfileComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  
 })
 export class AppComponent {
   name=''
@@ -23,6 +24,7 @@ export class AppComponent {
   setName(){
     this.name="prachi";
   }
+  
   getEmail(val:string){
     console.log(val)
     this.email=val

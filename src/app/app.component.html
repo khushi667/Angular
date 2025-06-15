@@ -1,12 +1,11 @@
-<h1>Get and set value</h1>
-<h1>User Name is: {{displayName}}</h1>
-<input type="text" value="{{name}}" (input)="getName($event)" placeholder="Enter user name">
-<br>
-<br>
-<button (click)="showName()">Get Name</button>
-<button (click)="setName()">Set Name</button>
-<hr>
-<h1>Email: {{email}}</h1>
-<input type="text" value="{{email}}" placeholder="Enter Email" #emailField> <br>
-<button (click)="getEmail(emailField.value)">Get Email</button><br>
-<button (click)="setEmail()">Set Email</button>
+<style>
+    h2{
+        background: aqua;
+    }
+</style>
+
+<h1>Style rules and Options</h1>
+
+<h2 style="color: green;">hello</h2>
+<app-profile></app-profile>
+

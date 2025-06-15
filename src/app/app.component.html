@@ -1,19 +1,9 @@
-<!-- <h1>Interpolation in Angular</h1>
-<h1>hello i'm here to build a basic website using Angular19</h1>
-<h2>{{title}}</h2>
-<h3>{{name}}</h3>
-<h4>{{x+y}}</h4>
-<h5>{{user1===user2}}</h5>
-<h1>{{'khushi'.toUpperCase()}}</h1> -->
-
-
-<h1>Angular Components</h1>
-<app-login></app-login>
-
-<!-- <h2>Hello heading 2</h2>
-<app-login></app-login>
-<app-signup></app-signup>
-<app-profile></app-profile> -->
-
-<button (click)="otherFunction()">Click Me!!</button>
-<button (click)="sum(10,20)">Sum</button>
+<h1>Counter App</h1>
+<div style="text-align: center;">
+    <h2 class="count">{{count}}</h2>
+    <div>
+      <button (click)="handleCounter('minus')" class="btn bg-red">Decrement</button>
+      <button (click)="handleCounter('reset')" class="btn bg-black">Reset</button>
+      <button (click)="handleCounter('plus')" class="btn bg-green">Increment</button>
+    </div>
+</div>

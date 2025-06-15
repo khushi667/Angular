@@ -12,51 +12,91 @@ import { ProfileComponent } from './profile/profile.component';
 })
 export class AppComponent {
 
-   handleClickEvent(){
-    console.log("Function Called!!!")
-    this.otherFunction()    // we can't call otherFunction() like this coz the function is inside the class so we have to use this keyword
-  }
+  count=0
+  // handleIncrement(){
+  //   this.count=this.count+1
+  // }
+  // handleDecrement(){
+  //   this.count=this.count-1
+  // }
+  // handleReset(){
+  //   this.count=0
+  // }
 
-  otherFunction(){
-    console.log("Other Function !!!")
-  }
-
-  name="Khushi"
-  data:string | number = "Hello"
-  other:any = true
-
-  updateName(){
-    this.name="prachi"
-    this.data=123
-    this.other='om'
-    this.other=30
-    this.other={}
-  }
-
-    updateVar(){
-      let x= 30
-      console.log(x)
-      this.sum(20,30)
+  handleCounter(val:string){
+    if(val=='minus' && this.count!=0){
+       this.count=this.count-1
+    }else if(val=='plus'){
+       this.count=this.count+1
     }
-
-    sum(a:number,b:number){
-      console.log(a+b)
-
+    else{
+      this.count=0
     }
-
-     // title = 'My Angular App';
-  // name = 'Khushi';
-  // x = 5;
-  // y = 10;
-  // user1 = 'admin';
-  // user2 = 'admin';
-
+  }
+  
   }
 
 
 
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //    handleClickEvent(){
+  //   console.log("Function Called!!!")
+  //   this.otherFunction()    // we can't call otherFunction() like this coz the function is inside the class so we have to use this keyword
+  // }
+
+  // otherFunction(){
+  //   console.log("Other Function !!!")
+  // }
+
+  // name="Khushi"
+  // data:string | number = "Hello"
+  // other:any = true
+
+  // updateName(){
+  //   this.name="prachi"
+  //   this.data=123
+  //   this.other='om'
+  //   this.other=30
+  //   this.other={}
+  // }
+
+  //   updateVar(){
+  //     let x= 30
+  //     console.log(x)
+  //     this.sum(20,30)
+  //   }
+
+  //   sum(a:number,b:number){
+  //     console.log(a+b)
+
+  //   }
+
+  //    // title = 'My Angular App';
+  // // name = 'Khushi';
+  // // x = 5;
+  // // y = 10;
+  // // user1 = 'admin';
+  // // user2 = 'admin';
+
  
 
 

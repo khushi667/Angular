@@ -1,6 +1,9 @@
 <h1>Computed Signal</h1>
 
 
-<h1>{{z()}}</h1>
-<button (click)="showValue()">Show Value</button>
-<button (click)="updateX()">Update X</button>
+<h1>{{ count() }}</h1>
+<button (click)="toggleValue()">Update user name</button>
+
+@if (displayHeading) {
+    <h1 style="background-color: green;">Heading Page</h1>
+}

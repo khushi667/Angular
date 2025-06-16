@@ -2,6 +2,7 @@ import { Component, computed, effect, Signal, signal, WritableSignal } from '@an
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +13,24 @@ import { ProfileComponent } from './profile/profile.component';
   
 })
 export class AppComponent {
-  x=signal(10);
-  y=signal(10);
-  z=computed(()=>this.x()+this.y())
-
-  showValue(){
-    console.log(this.z());
-    this.x.set(100)
-    console.log(this.z());
+  userName = signal('khushi')
+  count = signal(0)
+  displayHeading=true;
+  constructor(){
+    effect(()=>{
+      // console.log(this.userName());
+      if(this.count()==2){
+        this.displayHeading=true
+        setTimeout(()=>{
+          this.displayHeading=false
+        },2000)
+      }else{
+        this.displayHeading=false
+      }
+    })
   }
-  updateX(){
-    this.x.set(200)
+  toggleValue(){
+    // this.displayHeading=!this.displayHeading;
+    this.count.set(this.count()+1)
   }
   }

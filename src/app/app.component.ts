@@ -12,20 +12,11 @@ import { ProfileComponent } from './profile/profile.component';
   
 })
 export class AppComponent {
-   display = true;
-    x=20
-    toggleDiv=true;
-
-    hide(){
-      this.display=false
-    }
-    show(){
-      this.display=true
-    }
-    toggle(){
-      this.display=!this.display
-    }
-    toggleTwo(){
-      this.toggleDiv=!this.toggleDiv;
-    }
+  color=9
+  handleColor(val:number){
+    this.color=val
+  }
+  handleInput(event:Event){
+    this.color=parseInt((event.target as HTMLInputElement).value)
+  }
   }

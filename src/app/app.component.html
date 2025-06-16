@@ -1,18 +1,13 @@
-<h1>For Loop Angular</h1>
+<h1>Signals in Angular</h1>
+
+<h2>{{count()}}</h2>
+ <h2>{{x}}</h2>
  
-<!-- <h2>{{users[0]}}</h2> -->
 
-@for (user of users; track user) {
-  <h2>{{user}}</h2>
-}
-<hr>
+ <!-- <button (click)="count.set(100)">Increse Signal</button> -->
 
-@for (student of students; track student.name; let id=$index){
-  <h2>
-    <span>{{ id+1 }}</span>
-    <span>{{ student.name }}</span>
-    <span>{{ student.age }}</span>
-    <span>{{ student.email }}</span>
-    <button (click)="getName(student.name)">Get Name</button>
-  </h2>
-}
+ <!-- <button (click)="updateValue()">Update Value</button> -->
+
+ <button (click)="updateValue('dec')">Decrement</button>
+ <h1>{{count()}}</h1>
+ <button (click)="updateValue('inc')">Increment</button>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -12,14 +12,21 @@ import { ProfileComponent } from './profile/profile.component';
   
 })
 export class AppComponent {
- users=["khushi","prachi","om","riya","priya"];
- students=[
-  { name:'khushi',age:21,email:'khushi@gmail.com'},
-  { name:'prachi',age:17,email:'prachi@gmail.com'},
-  { name:'om',age:12,email:'om@gmail.com'},
-  { name:'riya',age:21,email:'riya@gmail.com'},
- ]
-getName(name:string){
-  console.log(name)
-}
+  count=signal(10);
+  x=20;
+  constructor(){
+    effect(()=>{
+      console.log(this.count())
+    })
+  }
+
+  updateValue(val:string){
+    // this.count.set(this.count()+1)
+    // this.x=this.x+1;
+    if(val=='inc'){
+      this.count.set(this.count()+1)
+    }else{
+      this.count.set(this.count()-1)
+    }
+  }
   }

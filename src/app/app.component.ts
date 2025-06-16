@@ -12,10 +12,16 @@ import { ProfileComponent } from './profile/profile.component';
   
 })
 export class AppComponent {
-  data: WritableSignal<number | string> =signal(10);
-  count :Signal<number> = computed(()=>200)
-  updateSignal(){
-    this.data.set('hello')
-    // this.count.set(20)  // we can't update computed signal 
+  x=signal(10);
+  y=signal(10);
+  z=computed(()=>this.x()+this.y())
+
+  showValue(){
+    console.log(this.z());
+    this.x.set(100)
+    console.log(this.z());
+  }
+  updateX(){
+    this.x.set(200)
   }
   }

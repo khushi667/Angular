@@ -12,11 +12,14 @@ import { ProfileComponent } from './profile/profile.component';
   
 })
 export class AppComponent {
-  color=9
-  handleColor(val:number){
-    this.color=val
-  }
-  handleInput(event:Event){
-    this.color=parseInt((event.target as HTMLInputElement).value)
-  }
+ users=["khushi","prachi","om","riya","priya"];
+ students=[
+  { name:'khushi',age:21,email:'khushi@gmail.com'},
+  { name:'prachi',age:17,email:'prachi@gmail.com'},
+  { name:'om',age:12,email:'om@gmail.com'},
+  { name:'riya',age:21,email:'riya@gmail.com'},
+ ]
+getName(name:string){
+  console.log(name)
+}
   }

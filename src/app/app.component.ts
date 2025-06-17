@@ -13,24 +13,7 @@ import { timer } from 'rxjs';
   
 })
 export class AppComponent {
-  userName = signal('khushi')
-  count = signal(0)
-  displayHeading=true;
-  constructor(){
-    effect(()=>{
-      // console.log(this.userName());
-      if(this.count()==2){
-        this.displayHeading=true
-        setTimeout(()=>{
-          this.displayHeading=false
-        },2000)
-      }else{
-        this.displayHeading=false
-      }
-    })
-  }
-  toggleValue(){
-    // this.displayHeading=!this.displayHeading;
-    this.count.set(this.count()+1)
-  }
+  users=['khushi','prachi','om','riya','priya','ekta','komal','roshni','sanu']
+
+  // users=[]
   }

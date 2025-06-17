@@ -1,9 +1,31 @@
-<h1>Computed Signal</h1>
+<h1>For Loop Contexual Variables</h1>
 
+<!-- @for (user of users; track user){
+    <h3>This is our {{$index+1}} user and name is {{user}}</h3>
+} -->
 
-<h1>{{ count() }}</h1>
-<button (click)="toggleValue()">Update user name</button>
+@for (user of users; track user;
+ let i=$index;
+ let f=$first;
+ let l=$last
+ ) {
+    <!-- <h4>{{$last}}</h4> -->
+    <!-- <h4>{{$first}}</h4> -->
+     <!-- @if(f || l) {
+            <h3 style="background-color: red;">This is our {{i+1}} user and name is {{user}}</h3>
+     }
+     @else{
+        <h3>This is our {{i+1}} user and user name is {{user}}</h3>
+     } -->
+    @if ($odd){
+        <h3 style="background-color: blue;">This is our {{i}} user and user name is {{ user }}</h3>
+    }
+    @if ($even){
+         <h3 style="background-color: green;">This is our {{i}} user and user name is {{user}}</h3>
+    }
 
-@if (displayHeading) {
-    <h1 style="background-color: green;">Heading Page</h1>
+    <!-- <h1>{{$count}}</h1> -->
 }
+ @empty(){
+        <h1>No Result Available</h1>
+     }
